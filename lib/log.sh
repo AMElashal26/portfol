@@ -79,9 +79,9 @@ _log_quick() {
     unique_skills_json=$(printf '%s\n' "${skills[@]}" | sort -u | jq -R . | jq -s .)
   fi
 
-  # Build JSONL entry
+  # Build JSONL entry (compact: one line per entry)
   local entry
-  entry=$(jq -n \
+  entry=$(jq -cn \
     --arg id "$build_id" \
     --arg ts "$timestamp" \
     --arg desc "$description" \

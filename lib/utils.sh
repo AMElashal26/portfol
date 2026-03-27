@@ -49,8 +49,9 @@ portfol_error() {
 generate_build_id() {
   local today=$(date +%Y%m%d)
   local count=1
-  if [[ -f "$BUILDS_FILE" ]]; then
-    local today_count=$(grep -c "\"b_${today}_" "$BUILDS_FILE" 2>/dev/null || echo 0)
+  if [[ -f "$BUILDS_FILE" && -s "$BUILDS_FILE" ]]; then
+    local today_count
+    today_count=$(grep -c "b_${today}_" "$BUILDS_FILE" 2>/dev/null) || today_count=0
     count=$((today_count + 1))
   fi
   printf "b_%s_%03d" "$today" "$count"
