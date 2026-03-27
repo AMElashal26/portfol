@@ -1,0 +1,14 @@
+{
+  "name": "Ali Ahmed",
+  "profile_summary": "AI automation builder. I build workflow tools, data pipelines, and internal tools using Claude, Python, AppleScript, and shell scripting.",
+  "linkedin_url": "",
+  "github_url": "https://github.com/AMElashal26",
+  "target_roles": [
+    "AI Automation Consultant",
+    "Workflow Engineer",
+    "Internal Tools Developer"
+  ],
+  "tone": "confident, practical, builder-mindset",
+  "auto_generate_on_log": true,
+  "default_generate_modes": ["linkedin-post", "resume-bullet", "upwork-gig"]
+}
